@@ -67,7 +67,7 @@ Gateway.prototype = {
     },
 
     set dst_translate(value) {
-        let regex = /\^\.\*\/(.*)&/i;
+        let regex = /\^?\.\*\/(.*)&/i;
         let prefix = regex.exec(value);
         if (prefix) this.prefix = prefix[1];
     },
